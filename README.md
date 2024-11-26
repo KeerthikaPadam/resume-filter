@@ -1,121 +1,69 @@
 
-
 # Resume Filter
 
-A simple web application to filter and display resumes based on user-selected criteria, built with HTML, CSS, and JavaScript.
-
-## Overview
-
-The Resume Filter project allows users to filter resumes by different criteria such as skills, experience, or job title. This project is built using basic web technologies (HTML, CSS, and JavaScript) to demonstrate dynamic content filtering on the client side.
+A simple web application for filtering uploaded PDF resumes based on specific keywords. Users can upload up to 5 resumes and input keywords to search for in the resumes. The app processes the PDF files, extracts text, and filters resumes that match the provided keywords.
 
 ## Features
+- Upload up to 5 PDF resumes.
+- Enter comma-separated keywords for filtering.
+- Displays the list of resumes that contain all the entered keywords.
+- The tool uses PDF.js to extract text from PDF files.
 
-- **Filter by Skills:** Users can filter resumes based on specific skills mentioned in the resumes.
-- **Filter by Job Title:** Users can select a job title to view resumes that match that title.
-- **Responsive Design:** The application is fully responsive and works well on both desktop and mobile devices.
-- **Dynamic Filtering:** Filtering is done in real-time, with no need for page reloads.
+## Prerequisites
 
-## Tech Stack
+- A modern web browser (Google Chrome, Mozilla Firefox, etc.)
+- Internet connection for loading PDF.js from CDN
 
-- **HTML5**: For the structure of the web page.
-- **CSS3**: For styling and layout.
-- **JavaScript**: For implementing the filtering functionality.
-- **(Optional)** Any JavaScript libraries (if you used any, like jQuery).
+## Files Included
+- `index.html`: The main HTML file containing the structure and functionality.
+- `styles.css`: Basic styling for the page layout.
+- `script.js`: JavaScript file for handling PDF extraction, filtering, and displaying results.
 
-## Demo
+## Usage
 
-You can try the live demo of the Resume Filter app [here](#). (Link to live demo or hosted version, if available)
+### 1. Upload PDF Resumes
+- Click the **"Upload File 1"**, **"Upload File 2"**, ..., **"Upload File 5"** buttons to select PDF files from your local machine. A maximum of 5 PDF files can be uploaded.
 
-## Screenshots
+### 2. Enter Keywords
+- In the "Enter Keywords" field, type a comma-separated list of keywords to filter the resumes (e.g., `Python, Machine Learning`).
 
-Include screenshots of the application here.
+### 3. Filter Resumes
+- Click the **"Filter Resumes"** button to filter the uploaded resumes based on the entered keywords.
+- The app will display a list of resumes that contain all the entered keywords.
 
-![Resume Filter Screenshot](path_to_screenshot_image)
-
-## Installation
-
-### Clone the Repository
-
-You can clone this repository to your local machine using the following command:
-
-```bash
-git clone https://github.com/your-username/resume-filter.git
-```
-
-### File Structure
-
-```
-resume-filter/
-├── index.html
-├── styles.css
-├── script.js
-├── images/      # Optional: Folder for any images used in the project
-└── README.md
-```
-
-### Open in a Browser
-
-Once you've cloned the repository, simply open the `index.html` file in your web browser to view the application.
+### 4. Results
+- The matching resumes are displayed below the button, with the file names listed.
 
 ## How It Works
 
-1. **HTML:** Defines the structure of the resume filter interface, including the form inputs for filtering and the display area for the resumes.
-2. **CSS:** Provides the styling for the page, making it visually appealing and user-friendly. The layout is responsive to ensure it works on various screen sizes.
-3. **JavaScript:** Adds functionality to the filter system. When the user selects a filter option (e.g., a specific skill or job title), the JavaScript dynamically updates the list of resumes that match the selected criteria.
+1. **PDF.js Integration**: The app uses the [PDF.js](https://mozilla.github.io/pdf.js/) library to extract text from the uploaded PDF files.
+2. **Text Extraction**: The text from each PDF is extracted page by page.
+3. **Keyword Matching**: Each extracted text is compared with the entered keywords, and resumes that match all keywords are displayed.
+   
+## Installation
 
-### Example Code Snippet
+1. **Clone the repository** or download the project files:
+   ```bash
+   git clone https://github.com/your-username/resume-filter.git
+   ```
 
-#### HTML: Resume Data Structure
+2. Open the `index.html` file in a browser to use the tool.
 
-```html
-<div class="resume-card" data-skills="HTML,CSS,JavaScript" data-job="Frontend Developer">
-  <h3>John Doe</h3>
-  <p>Job Title: Frontend Developer</p>
-  <p>Skills: HTML, CSS, JavaScript</p>
-</div>
-```
+## Libraries Used
 
-#### JavaScript: Filter Functionality
+- [PDF.js](https://mozilla.github.io/pdf.js/) for extracting text from PDF files.
+- Basic HTML5, CSS, and JavaScript.
 
-```javascript
-function filterResumes() {
-    let selectedSkill = document.getElementById('skillFilter').value;
-    let selectedJob = document.getElementById('jobFilter').value;
-    
-    let resumes = document.querySelectorAll('.resume-card');
-    resumes.forEach(resume => {
-        let skills = resume.getAttribute('data-skills').split(',');
-        let job = resume.getAttribute('data-job');
-        
-        if ((selectedSkill === 'All' || skills.includes(selectedSkill)) && 
-            (selectedJob === 'All' || job === selectedJob)) {
-            resume.style.display = 'block';
-        } else {
-            resume.style.display = 'none';
-        }
-    });
-}
-```
+## Troubleshooting
 
-### Filtering Options
-
-- **Skills Filter**: Dropdown to select skills like HTML, CSS, JavaScript, etc.
-- **Job Title Filter**: Dropdown to select job titles such as Frontend Developer, Backend Developer, etc.
-
+- **PDF.js library not loading**: Ensure you have an active internet connection as the library is loaded from a CDN.
+- **No matching resumes**: Ensure the keywords are entered correctly and match the content within the resumes. The keywords are case-insensitive.
+  
 ## Contributing
 
-Feel free to fork the repository and submit pull requests! Contributions are always welcome. Please ensure that your code adheres to the following guidelines:
-
-- Follow consistent naming conventions.
-- Make sure the code is well-commented.
-- Test your changes locally before submitting a pull request.
+If you'd like to contribute to this project, feel free to fork the repository and submit a pull request with your changes.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- Inspiration from various resume filtering applications.
-- HTML, CSS, and JavaScript tutorials that helped build this project.
+This project is open-source and available under the [MIT License](LICENSE).
 
