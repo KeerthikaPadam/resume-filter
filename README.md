@@ -44,7 +44,7 @@ A simple web application for filtering uploaded PDF resumes based on specific ke
 
 1. **Clone the repository** or download the project files:
    ```bash
-   git clone https://github.com/your-username/resume-filter.git
+   git clone https://github.com/KeerthikaPadam/resume-filter.git
    ```
 
 2. Open the `index.html` file in a browser to use the tool.
