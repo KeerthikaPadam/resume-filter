@@ -1,69 +1,122 @@
+# Resume Filtering Tool
 
-# Resume Filter
+![Python](https://img.shields.io/badge/Python-3.x-blue) ![Tkinter](https://img.shields.io/badge/Tkinter-GUI-green) ![PyPDF2](https://img.shields.io/badge/PyPDF2-PDF%20Parsing-orange)
 
-A simple web application for filtering uploaded PDF resumes based on specific keywords. Users can upload up to 5 resumes and input keywords to search for in the resumes. The app processes the PDF files, extracts text, and filters resumes that match the provided keywords.
+The **Resume Filtering Tool** is a Python-based desktop application that helps recruiters and hiring managers filter resumes based on user-defined keywords. It supports uploading individual resumes or entire folders of resumes, extracting text from PDFs, filtering based on keywords, and exporting filtered results as a CSV file.
+
+---
 
 ## Features
-- Upload up to 5 PDF resumes.
-- Enter comma-separated keywords for filtering.
-- Displays the list of resumes that contain all the entered keywords.
-- The tool uses PDF.js to extract text from PDF files.
 
-## Prerequisites
+- **Upload Resumes**: Upload single PDF files or entire folders containing resumes.
+- **Keyword-Based Filtering**: Filter resumes based on user-entered keywords (e.g., "Python", "SQL", "Machine Learning").
+- **Export Results**: Export filtered resumes as a CSV file for further analysis.
+- **Visual Dashboard**: Includes a bar chart showing the total number of resumes vs. filtered resumes.
+- **User-Friendly Interface**: Built with `tkinter` for an intuitive graphical user interface (GUI).
 
-- A modern web browser (Google Chrome, Mozilla Firefox, etc.)
-- Internet connection for loading PDF.js from CDN
+---
 
-## Files Included
-- `index.html`: The main HTML file containing the structure and functionality.
-- `styles.css`: Basic styling for the page layout.
-- `script.js`: JavaScript file for handling PDF extraction, filtering, and displaying results.
+## Installation
+
+### Prerequisites
+
+1. **Python 3.x**: Ensure you have Python installed. You can download it from [python.org](https://www.python.org/downloads/).
+2. **Required Libraries**: Install the required libraries using `pip`.
+
+```bash
+pip install PyPDF2 pandas matplotlib pillow
+```
+
+### Clone the Repository
+
+To clone this repository, run the following command:
+
+```bash
+git clone https://github.com/your-username/resume-filtering-tool.git
+cd resume-filtering-tool
+```
+
+---
 
 ## Usage
 
-### 1. Upload PDF Resumes
-- Click the **"Upload File 1"**, **"Upload File 2"**, ..., **"Upload File 5"** buttons to select PDF files from your local machine. A maximum of 5 PDF files can be uploaded.
+1. **Run the Application**:
+   - Navigate to the project directory and execute the script:
 
-### 2. Enter Keywords
-- In the "Enter Keywords" field, type a comma-separated list of keywords to filter the resumes (e.g., `Python, Machine Learning`).
+     ```bash
+     python resume_filter_tool.py
+     ```
 
-### 3. Filter Resumes
-- Click the **"Filter Resumes"** button to filter the uploaded resumes based on the entered keywords.
-- The app will display a list of resumes that contain all the entered keywords.
+2. **Upload Resumes**:
+   - Use the "Upload Single Resume" button to upload individual PDF files.
+   - Use the "Upload Folder of Resumes" button to upload an entire folder of PDF files.
 
-### 4. Results
-- The matching resumes are displayed below the button, with the file names listed.
+3. **Enter Keywords**:
+   - In the input box, type the keywords you want to filter by (e.g., `Python, SQL, Machine Learning`).
 
-## How It Works
+4. **Filter Resumes**:
+   - Click the "Filter Resumes" button to filter resumes based on the entered keywords.
 
-1. **PDF.js Integration**: The app uses the [PDF.js](https://mozilla.github.io/pdf.js/) library to extract text from the uploaded PDF files.
-2. **Text Extraction**: The text from each PDF is extracted page by page.
-3. **Keyword Matching**: Each extracted text is compared with the entered keywords, and resumes that match all keywords are displayed.
-   
-## Installation
+5. **Export Filtered Resumes**:
+   - Click the "Export Filtered Resumes" button to save the filtered results as a CSV file.
 
-1. **Clone the repository** or download the project files:
-   ```bash
-   git clone https://github.com/KeerthikaPadam/resume-filter.git
-   ```
+---
 
-2. Open the `index.html` file in a browser to use the tool.
+## Project Structure
 
-## Libraries Used
+```
+resume-filtering-tool/
+├── resume_filter_tool.py       # Main application script
+├── resume_icon.png             # Icon for uploaded resumes (optional)
+├── README.md                   # Documentation file
+└── requirements.txt            # List of required Python libraries
+```
 
-- [PDF.js](https://mozilla.github.io/pdf.js/) for extracting text from PDF files.
-- Basic HTML5, CSS, and JavaScript.
+---
 
-## Troubleshooting
+## Screenshots
 
-- **PDF.js library not loading**: Ensure you have an active internet connection as the library is loaded from a CDN.
-- **No matching resumes**: Ensure the keywords are entered correctly and match the content within the resumes. The keywords are case-insensitive.
-  
+### Main Interface
+![Main Interface](screenshots/main_interface.png)
+
+### Filtered Resumes
+![Filtered Resumes](screenshots/filtered_resumes.png)
+
+*(Replace the above image links with actual screenshots of your application.)*
+
+---
+
 ## Contributing
 
-If you'd like to contribute to this project, feel free to fork the repository and submit a pull request with your changes.
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature-name`).
+5. Open a pull request.
+
+---
 
 ## License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+- **PyPDF2**: For extracting text from PDF files.
+- **Tkinter**: For building the GUI.
+- **Matplotlib**: For creating visualizations.
+- **Pillow**: For handling images/icons in the GUI.
+
+---
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out:
+
+- Email: kusumakeerthi.padam@gmail.com
+- GitHub: [Your GitHub Profile](https://github.com/KeerthikaPadam)
 
