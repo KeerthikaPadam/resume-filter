@@ -32,7 +32,7 @@ pip install PyPDF2 pandas matplotlib pillow
 To clone this repository, run the following command:
 
 ```bash
-git clone https://github.com/your-username/resume-filtering-tool.git
+git clone https://github.com/KeerthikaPadam/resume-filter-tool
 cd resume-filtering-tool
 ```
 
