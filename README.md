@@ -74,15 +74,11 @@ resume-filtering-tool/
 
 ---
 
-## Screenshots
+## Screenshot
 
-### Main Interface
-![Main Interface](screenshots/main_interface.png)
+![Image](https://github.com/user-attachments/assets/a63e7b0b-9c30-4cf5-989f-c06d4d63a253)
 
-### Filtered Resumes
-![Filtered Resumes](screenshots/filtered_resumes.png)
 
-*(Replace the above image links with actual screenshots of your application.)*
 
 ---
 
@@ -118,5 +114,5 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 If you have any questions or suggestions, feel free to reach out:
 
 - Email: kusumakeerthi.padam@gmail.com
-- GitHub: [Your GitHub Profile](https://github.com/KeerthikaPadam)
-
+- GitHub: [[Your GitHub Profile](https://github.com/KeerthikaPadam)
+](https://github.com/KeerthikaPadam)
